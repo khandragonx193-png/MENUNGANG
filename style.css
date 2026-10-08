@@ -1,0 +1,79 @@
+/* Cố định phông chữ và phân vùng cho trình đơn */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#menu {
+  height: 40px;
+  border: 1px solid #ccc;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  list-style: none;
+}
+
+/* Bộ chọn cho các phần tử trong danh sách */
+#menu li {
+  float: left;
+  position: relative;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+
+/* Bộ chọn cho các liên kết trong trình đơn */
+#menu li a {
+  display: block;
+  width: 150px;
+  height: 40px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  background-color: #f0f0f0;
+}
+
+/* Khi đưa con trỏ qua liên kết → chuyển màu nền sang đỏ */
+#menu li a:hover {
+  background-color: red;
+  color: white;
+}
+
+/* Vị trí hiển thị của danh sách con (trình đơn con) */
+#menu ul {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 150px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  visibility: hidden; /* Ẩn mặc định */
+}
+
+/* Hiển thị trình đơn con khi di chuột vào mục cha */
+#menu li:hover > ul {
+  visibility: visible;
+}
+
+/* Định dạng các mục trong menu con */
+#menu ul li {
+  float: none;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  text-align: left;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+#menu ul li a {
+  width: 100%;
+  text-align: left;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
